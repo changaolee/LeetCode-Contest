@@ -13,3 +13,28 @@ LeetCode 周赛题解
 | [weekly-contest-154](./Weekly-Contest-154)| [1189](./Weekly-Contest-154/【A】“气球”的最大数量.md) | [1190](./Weekly-Contest-154/【B】反转每对括号间的子串.md) | [1191](./Weekly-Contest-154/【C】K次串联后最大子数组之和.md) | [1192](./Weekly-Contest-154/【D】查找集群内的「关键连接」.md) |
 
 ### 双周赛
+
+## 初始化脚本
+
+这里通过脚本的方式抓取 LeetCode 题目信息，并初始化 Markdown 文档。
+
+格式：`python3 init_contest.py <weekly/biweekly> <number>`
+
+### Example
+
+```
+$ python3 init_contest.py weekly 155
+```
+
+输出：
+
+```
+saved 最小绝对差.
+saved 丑数 III.
+saved 交换字符串中的元素.
+saved 项目管理.
+```
+
+## License
+
+[The MIT License (MIT)](./LICENSE)
