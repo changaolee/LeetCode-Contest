@@ -19,39 +19,31 @@
 如果没有合适的解决方案，就请返回一个 **空列表** 。
 
 
-
 **示例 1：**
 
-**![](https://assets.leetcode-cn.com/aliyun-lc-
-upload/uploads/2019/09/22/1359_ex1.png)**
+<img src="./Resources/example_1.png" width="200" height="200" />
 
-    
-    
-    输入：n = 8, m = 2, group = [-1,-1,1,0,0,1,0,-1], beforeItems = [[],[6],[5],[6],[3,6],[],[],[]]
-    输出：[6,3,4,1,5,2,0,7]
-    
+```
+输入：n = 8, m = 2, group = [-1,-1,1,0,0,1,0,-1], beforeItems = [[],[6],[5],[6],[3,6],[],[],[]]
+输出：[6,3,4,1,5,2,0,7]
+```
 
 **示例  2：**
 
-    
-    
-    输入：n = 8, m = 2, group = [-1,-1,1,0,0,1,0,-1], beforeItems = [[],[6],[5],[6],[3],[],[4],[]]
-    输出：[]
-    解释：与示例 1 大致相同，但是在排序后的列表中，4 必须放在 6 的前面。
-    
-
-
+```    
+输入：n = 8, m = 2, group = [-1,-1,1,0,0,1,0,-1], beforeItems = [[],[6],[5],[6],[3],[],[4],[]]
+输出：[]
+解释：与示例 1 大致相同，但是在排序后的列表中，4 必须放在 6 的前面。
+```
 
 **提示：**
 
-  * `1 <= m <= n <= 3*10^4`
-  * `group.length == beforeItems.length == n`
-  * `-1 <= group[i] <= m-1`
-  * `0 <= beforeItems[i].length <= n-1`
-  * `0 <= beforeItems[i][j] <= n-1`
-  * `i != beforeItems[i][j]`
-
-
+* `1 <= m <= n <= 3*10^4`
+* `group.length == beforeItems.length == n`
+* `-1 <= group[i] <= m-1`
+* `0 <= beforeItems[i].length <= n-1`
+* `0 <= beforeItems[i][j] <= n-1`
+* `i != beforeItems[i][j]`
 
 ### 解析
 
