@@ -14,7 +14,7 @@
 
 **示例 1：**
 
-![image](https://github.com/lichangao1826/LeetCode-Contest/blob/master/Weekly-Contest-154/Resources/critical-connections-in-a-network.png)
+![image](./Resources/critical-connections-in-a-network.png)
 
 ```
 输入：n = 4, connections = [[0,1],[1,2],[2,0],[1,3]]
