@@ -21,7 +21,7 @@
 
 **示例 1：**
 
-![](./Resources/example_1.png)
+![](https://github.com/lichangao1826/LeetCode-Contest/blob/master/Weekly-Contest-155/Resources/example_1.png)
 
 ```
 输入：n = 8, m = 2, group = [-1,-1,1,0,0,1,0,-1], beforeItems = [[],[6],[5],[6],[3,6],[],[],[]]
