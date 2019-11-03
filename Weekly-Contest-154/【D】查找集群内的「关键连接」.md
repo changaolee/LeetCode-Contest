@@ -14,7 +14,7 @@
 
 **示例 1：**
 
-![image](./Resources/critical-connections-in-a-network.png)
+<img src="./Resources/critical-connections-in-a-network.png" width="200" height="200"/>
 
 ```
 输入：n = 4, connections = [[0,1],[1,2],[2,0],[1,3]]
