@@ -21,7 +21,7 @@
 
 **示例 1：**
 
-![image](./Resources/example_1.png)
+<img src="./Resources/example_1.png" width="200" height="200"/>
 
 ```
 输入：n = 8, m = 2, group = [-1,-1,1,0,0,1,0,-1], beforeItems = [[],[6],[5],[6],[3,6],[],[],[]]
