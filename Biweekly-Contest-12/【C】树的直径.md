@@ -11,7 +11,7 @@
 
 **示例 1：**
 
-<img src="./Resources/tree_1.png" width="200" height="200"/>
+<img src="https://cdn.lichangao.com/wp-content/uploads/2019/11/tree_1.png" width="200" height="200"/>
 
 ```
 输入：edges = [[0,1],[0,2]]
@@ -22,7 +22,7 @@
 
 **示例 2：**
 
-<img src="./Resources/tree_2.png" width="200" height="200"/>
+<img src="https://cdn.lichangao.com/wp-content/uploads/2019/11/tree_2.png" width="200" height="200"/>
 
 ```
 输入：edges = [[0,1],[1,2],[2,3],[1,4],[4,5]]
@@ -50,7 +50,7 @@
 **定理：** 在一个连通无向无环图中，以任意结点出发所能到达的最远结点，一定是该图直径的端点之一。
 
 <div>
-    <img src="./Resources/tree_prove_1.png" width="200" height="200"/><img src="./Resources/tree_prove_2.png" width="200" height="200"/><img src="./Resources/tree_prove_3.png" width="200" height="200"/>
+    <img src="https://cdn.lichangao.com/wp-content/uploads/2019/11/tree_prove_1.png" width="200" height="200"/><img src="https://cdn.lichangao.com/wp-content/uploads/2019/11/tree_prove_2.png" width="200" height="200"/><img src="https://cdn.lichangao.com/wp-content/uploads/2019/11/tree_prove_3.png" width="200" height="200"/>
 </div>
 
 **证明：** 假设这条直径是 `δ(s,t)`。分两种情况：
