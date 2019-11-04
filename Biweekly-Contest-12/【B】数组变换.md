@@ -40,4 +40,26 @@
 
 ### 解析
 
+直接暴力即可。
+
 ### 代码
+
+```cpp
+class Solution {
+public:
+    vector<int> transformArray(vector<int>& arr) {
+        while (true) {
+            vector<int> backup(arr);
+            for (int i = 1; i < arr.size() - 1; i ++) {
+                if (arr[i] < backup[i - 1] && arr[i] < backup[i + 1]) {
+                    arr[i] ++;
+                } else if (arr[i] > backup[i - 1] && arr[i] > backup[i + 1]) {
+                    arr[i] --;
+                }
+            }
+            if (arr == backup) break;
+        }
+        return arr;
+    }
+};
+```
