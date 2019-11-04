@@ -49,9 +49,9 @@
 
 **定理：** 在一个连通无向无环图中，以任意结点出发所能到达的最远结点，一定是该图直径的端点之一。
 
-<figure class="third">
+<div>
     <img src="./Resources/tree_prove_1.png" width="200" height="200"/><img src="./Resources/tree_prove_2.png" width="200" height="200"/><img src="./Resources/tree_prove_3.png" width="200" height="200"/>
-</figure>
+</div>
 
 **证明：** 假设这条直径是 `δ(s,t)`。分两种情况：
 
