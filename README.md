@@ -17,7 +17,7 @@ LeetCode 周赛题解
 
 | 比赛场次 | 【A】题 | 【B】题 | 【C】题 | 【D】题 |
 | :-----: | :-----: | :-----: | :-----: | :-----: |
-| biweekly-contest-12[](./Biweekly-Contest-12)| 1244[](./Biweekly-Contest-12/【A】力扣排行榜.md) | 1243[](./Biweekly-Contest-12/【B】数组变换.md) | 1245[](./Biweekly-Contest-12/【C】树的直径.md) | 1246[](./Biweekly-Contest-12/【D】删除回文子数组.md) |
+| [biweekly-contest-12](./Biweekly-Contest-12)| [1244](./Biweekly-Contest-12/【A】力扣排行榜.md) | 1243[](./Biweekly-Contest-12/【B】数组变换.md) | 1245[](./Biweekly-Contest-12/【C】树的直径.md) | 1246[](./Biweekly-Contest-12/【D】删除回文子数组.md) |
 
 ## 初始化脚本
 
