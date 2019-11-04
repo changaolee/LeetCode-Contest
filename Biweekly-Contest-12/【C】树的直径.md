@@ -40,4 +40,68 @@
 
 ### 解析
 
+树的直径的解法，两次 BFS：
+
+1. 任取一点 BFS，选择最长路径的节点，假设这个点为 `a`。
+2. 从 `a` 开始 BFS，最长路径就是树的直径。
+
+下面来证明这个定理。
+
+**定理：** 在一个连通无向无环图中，以任意结点出发所能到达的最远结点，一定是该图直径的端点之一。
+
+**证明：** 假设这条直径是 `δ(s,t)`。分两种情况：
+
+1. 当出发结点 `y` 在 `δ(s,t)` 时，假设到达的最远结点 `z` 不是 `s`, `t` 中的任一个。这时将 `δ(y,z)` 与不与之重合的 `δ(y,s)` 拼接（也可以假设不与之重合的是直径的另一个方向），可以得到一条更长的直径，与前提矛盾，如下图所示。
+
+<img src="./Resources/tree_prove_1.png" width="200" height="200"/>
+
+2. 当出发结点 `y` 不在 `δ(s,t)` 上时，分两种情况：
+    - 当 `y` 到达的最远结点 `z` 横穿 `δ(s,t)` 时，记与之相交的结点为 `x`。此时有 `δ(y,z) = δ(y,x) + δ(x,z)`。而此时 `δ(y,z) > δ(y,t)`，故可得 `δ(x,z) > δ(x,t)`。由 1 的结论可知该假设不成立。
+    - 当 `y` 到达的最远结点 `z` 与 `δ(s,t)` 不相交时，记 `y` 到 `t` 的最短路首先与 `δ(s,t)` 相交的结点是 `x`。由假设 `δ(y,z) > δ(y,x) + δ(x,t)`。而 `δ(y,z) + δ(y,x) + δ(x,s)` 又可以形成 `δ(z,s)`，而 `δ(z,s) > δ(x,s) + δ(x,t) + 2 * δ(y,x) = δ(s,t) + 2 * δ(y,x)`，显然与题意矛盾。
+
 ### 代码
+
+```cpp
+class Solution {
+public:
+    pair<int, int> treeBFS(vector<vector<int>> e, int start) {
+        vector<int> distance(e.size(), -1);
+        distance[start] = 0;
+        
+        queue<int> Queue;
+        Queue.push(start);
+        
+        pair<int, int> ans;
+        while (!Queue.empty()) {
+            int node = Queue.front();
+            Queue.pop();
+            ans.first = node;
+            ans.second = distance[node];
+            for (auto x: e[node]) {
+                if (distance[x] == -1) {
+                    distance[x] = distance[node] + 1;
+                    Queue.push(x);
+                }
+            }
+        }
+        
+        return ans;
+    }
+    
+    int treeDiameter(vector<vector<int>>& edges) {
+        int n = edges.size() + 1;
+        vector<vector<int>> e(n, vector<int>());
+        
+        for (auto edge: edges) {
+            e[edge[0]].push_back(edge[1]);
+            e[edge[1]].push_back(edge[0]);
+        }
+        
+        pair<int, int> node;
+        node = treeBFS(e, 0);
+        node = treeBFS(e, node.first);
+        
+        return node.second;
+    }
+};
+```
