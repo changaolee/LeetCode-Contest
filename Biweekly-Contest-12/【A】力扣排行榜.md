@@ -45,4 +45,48 @@ leaderboard.top(3);           // returns 141 = 51 + 51 + 39;
 
 ### 解析
 
+根据题意，最多 `1000` 次函数调用，说明 `playerId, K <= 1000`，直接暴力即可。
+
+使用一个 `map` 来存储用户和分数的关系，在计算 `topK` 的时候进行排序，选择前 `K` 项相加得到。
+
 ### 代码
+
+```cpp
+class Leaderboard {
+public:
+    map<int, int> playerScore;
+    
+    Leaderboard() {
+        
+    }
+    
+    void addScore(int playerId, int score) {
+        playerScore[playerId] += score;
+    }
+    
+    int top(int K) {
+        vector<int> scores;
+        for (auto it = playerScore.begin(); it != playerScore.end(); it ++) {
+            scores.push_back(it->second);
+        }
+        sort(scores.rbegin(), scores.rend());
+        int ans = 0;
+        for (int i = 0; i < K; i ++) {
+            ans += scores[i];
+        }
+        return ans;
+    }
+    
+    void reset(int playerId) {
+        playerScore[playerId] = 0;
+    }
+};
+
+/**
+ * Your Leaderboard object will be instantiated and called as such:
+ * Leaderboard* obj = new Leaderboard();
+ * obj->addScore(playerId,score);
+ * int param_2 = obj->top(K);
+ * obj->reset(playerId);
+ */
+```
