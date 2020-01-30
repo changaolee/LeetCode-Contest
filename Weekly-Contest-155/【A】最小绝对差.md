@@ -34,4 +34,28 @@
 
 ### 解析
 
+先排序，然后在遍历过程中维护当前已知最小差值的元素对列表。
+    
 ### 代码
+
+```cpp
+class Solution {
+public:
+    vector<vector<int>> minimumAbsDifference(vector<int>& arr) {
+        sort(arr.begin(), arr.end());
+        
+        vector<vector<int>> ans;
+        int minDistance = INT_MAX;
+        for (int i = 1; i < arr.size(); i ++) {
+            if (arr[i] - arr[i - 1] < minDistance) {
+                ans.clear();
+                ans.push_back(vector<int>{arr[i - 1], arr[i]});
+                minDistance = arr[i] - arr[i - 1];
+            } else if (arr[i] - arr[i - 1] == minDistance) {
+                ans.push_back(vector<int>{arr[i - 1], arr[i]});
+            }
+        }
+        return ans;
+    }
+};
+```
