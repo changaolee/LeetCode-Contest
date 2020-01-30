@@ -13,11 +13,11 @@
 * 如果没有障碍，则向下移动一个单元格。并仍然保持身体的水平／竖直状态。
 * 如果它处于水平状态并且其下面的两个单元都是空的，就顺时针旋转 90 度。蛇从（`(r, c)`、`(r, c+1)`）移动到 （`(r, c)`、`(r+1, c)`）。  
 
-<img src="https://github.com/lichangao1826/LeetCode-Contest/blob/master/Weekly-Contest-156/Resources/move_1.png" width="500" height="200"/>
+<img src="https://github.com/lichangao1826/LeetCode-Contest/blob/master/Weekly-Contest-156/Resources/move_1.png" width="400" height="150"/>
 
 * 如果它处于竖直状态并且其右面的两个单元都是空的，就逆时针旋转 90 度。蛇从（`(r, c)`、`(r+1, c)`）移动到（`(r, c)`、`(r, c+1)`）。
     
-<img src="https://github.com/lichangao1826/LeetCode-Contest/blob/master/Weekly-Contest-156/Resources/move_2.png" width="500" height="200"/>
+<img src="https://github.com/lichangao1826/LeetCode-Contest/blob/master/Weekly-Contest-156/Resources/move_2.png" width="400 " height="150"/>
 
 返回蛇抵达目的地所需的最少移动次数。
 
@@ -25,7 +25,7 @@
 
 **示例 1：**
 
-<img src="https://github.com/lichangao1826/LeetCode-Contest/blob/master/Weekly-Contest-156/Resources/example_1.png" width="300" height="300"/>
+<img src="https://github.com/lichangao1826/LeetCode-Contest/blob/master/Weekly-Contest-156/Resources/example_1.png" width="250" height="250"/>
 
 ```
 输入：grid = [[0,0,0,0,0,1],
